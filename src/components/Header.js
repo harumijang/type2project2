@@ -1,15 +1,21 @@
 import React, { Component } from "react";
+import logo from "../Asset 1.png";
 
 class Header extends Component {
   render() {
     return (
-      <div class="topnav">
-        <a class="active" href="#home">
-          Home
-        </a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
+      <div>
+        <div class="topnav">
+          <a href="#login">LOG IN</a>
+          <a href="#cart">CART [NUMBER]</a>
+          <a href="#search">SEARCH ICON</a>
+        </div>
+        <img id="logo" src={logo} />
+        <div class="midnav">
+          <a href="#login">SHOP</a>
+          <a href="#cart">CORE</a>
+          <a href="#search">ONE ON ONE</a>
+        </div>
       </div>
     );
   }

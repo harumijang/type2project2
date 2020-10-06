@@ -3,6 +3,7 @@ import data from "./data.js";
 import Posts from "./Posts";
 import Pagination from "./Pagination";
 import shoe from "../nike.jpg";
+import Header from "./Header.js";
 
 const ProductPage = () => {
   const [posts, setPosts] = useState([]);
@@ -31,6 +32,7 @@ const ProductPage = () => {
 
   return (
     <div>
+      <Header></Header>
       <img id="shoe" src={shoe} />
       <br></br>
       <h1>Board Decks</h1>

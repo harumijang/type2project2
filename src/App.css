@@ -102,9 +102,9 @@ body {
 }
 
 /* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: white;
+.topnav a:hover,
+.midnav a:hover {
+  opacity: 0.6;
 }
 
 /* Add a color to the active/current link */
@@ -193,7 +193,7 @@ h2 {
 
 .page-item .page-link {
   color: var(--accent-color);
-  font-size: 15px;
+  font-size: 17px;
   font-family: var(--main-font);
   display: block;
   text-align: center;
@@ -202,5 +202,12 @@ h2 {
 #products > nav {
   display: block;
   text-align: center;
-  padding-left: 42%;
+}
+
+.Home video {
+  max-width: 100%;
+}
+
+.clickToEnter {
+  font-family: "Monument";
 }

@@ -11,17 +11,13 @@ import Film1 from "./components/Film1";
 function App() {
   return (
     <div className="container">
-      <Film1>
-        <Vehicles></Vehicles>
-      </Film1>
-      {/* <div className="Home">
+      <div className="Home">
         <Link to="/main">
-          <video autostart loop autoPlay src={Video} type="video/mp4" />
           <br></br>
           <br></br>
-          <h1 className="clickToEnter">CLICK TO ENTER SITE</h1>
+          <h1>enter</h1>
         </Link>
-      </div> */}
+      </div>
     </div>
   );
 }

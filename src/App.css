@@ -205,14 +205,6 @@ mark.red {
   text-align: center;
 }
 
-.Home video {
-  max-width: 100%;
-}
-
-.clickToEnter {
-  font-family: "Monument";
-}
-
 .article-body {
   padding-top: 50px;
   font-family: var(--main-font);
@@ -220,11 +212,16 @@ mark.red {
   color: white;
   text-align: left;
   line-height: 1.6;
-  margin-left: 650px;
+  margin-left: 50%;
+  margin-right: 30px;
   white-space: pre-wrap;
 }
 
 #article-photo {
   position: absolute;
   margin-left: -600px;
+}
+
+h4 {
+  text-align: center;
 }

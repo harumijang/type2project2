@@ -8,6 +8,7 @@ import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import Film1 from "./components/Film1";
 import Film2 from "./components/Film2";
 import Film3 from "./components/Film3";
+import Vehicles from "./components/article-photo";
 
 const routing = (
   <Router>

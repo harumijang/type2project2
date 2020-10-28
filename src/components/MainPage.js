@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
-import Product from "./Product.js";
+import Film1 from "./Film1.js";
+import Vehicles from "./article-photo.js";
 
 class MainPage extends Component {
   render() {
@@ -12,11 +13,9 @@ class MainPage extends Component {
           <h1>home</h1>
         </Link>
         <Link to="/film1">
-          <h1>film1</h1>
+          <h1>article1</h1>
         </Link>
-        <div class="container" id="products">
-          <Product className="col" productData={1}></Product>
-        </div>
+        <div class="container" id="products"></div>
       </div>
     );
   }

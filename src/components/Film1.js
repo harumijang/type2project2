@@ -51,15 +51,15 @@ class Film1 extends Component {
         <div class="row">
           <div class="col-sm article-body">
             <p>
-              LOS ANGELES — ELIZABETH CANTILLION has worked in Hollywood for
-              three decades, first as an executive at Sony Pictures, where she
-              helped steer the James Bond franchise, and now as a producer. In
-              other words, she has seen it all. But the current Oscar race has
-              left her slack-jawed. Where are the women? “It’s like ‘The Empire
-              Strikes Back,’” Cantillon said on Tuesday, after female directors
-              and films starring women were largely A.W.O.L. from the list of
-              Golden Globe nominees. The Screen Actors Guild was similarly
-              exclusionary on Wednesday, leaving out Greta
+              <h4>LOS ANGELES — ELIZABETH CANTILLION</h4> {`\n`}has worked in
+              Hollywood for three decades, first as an executive at Sony
+              Pictures, where she helped steer the James Bond franchise, and now
+              as a producer. In other words, she has seen it all. But the
+              current Oscar race has left her slack-jawed. Where are the women?
+              “It’s like ‘The Empire Strikes Back,’” Cantillon said on Tuesday,
+              after female directors and films starring women were largely
+              A.W.O.L. from the list of Golden Globe nominees. The Screen Actors
+              Guild was similarly exclusionary on Wednesday, leaving out Greta
               {this.redText("Gerwig’s", 1)}
               {opened[1] && this.redPhoto(f1)}
               “Little Women” and Lulu

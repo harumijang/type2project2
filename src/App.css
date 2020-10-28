@@ -1,9 +1,9 @@
 :root {
-  --main-font: "DIN-Bold";
+  --main-font: "Courier New", Courier, monospace;
   --main-font-bold: "Monument-Bold";
-  --accent-color: #c1272d;
+  --accent-color: white;
   /* --accent-color: #d33e43; */
-  --background-color: #19191a;
+  --background-color: #1f1e1b;
 }
 
 body {
@@ -158,8 +158,9 @@ h2 {
   color: var(--accent-color);
 }
 
-h2 {
-  padding-top: 10px;
+mark.red {
+  color: #ff0000;
+  background: none;
 }
 
 .product-listing--item {
@@ -210,4 +211,20 @@ h2 {
 
 .clickToEnter {
   font-family: "Monument";
+}
+
+.article-body {
+  padding-top: 50px;
+  font-family: var(--main-font);
+  font-size: 14px;
+  color: white;
+  text-align: left;
+  line-height: 1.6;
+  margin-left: 650px;
+  white-space: pre-wrap;
+}
+
+#article-photo {
+  position: absolute;
+  margin-left: -600px;
 }

@@ -14,7 +14,6 @@ const routing = (
   <Router>
     <div>
       <Route exact path="/" component={App} />
-      <Route path="/home" component={App} />
       <Route path="/main" component={MainPage} />
       <Route path="/film1" component={Film1} />
       <Route path="/film2" component={Film2} />

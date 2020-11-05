@@ -285,15 +285,6 @@ h4 {
   opacity: 0.6;
 }
 
-#asian-header {
-  width: 100%;
-  background-attachment: fixed;
-}
-
-#blah {
-  /* background: url("assets/asian_header.png");
-  background-position: center;
-  height: 1200px;
-  background-size: 100%;
-  width: 100%; */
+body {
+  margin: 0px;
 }

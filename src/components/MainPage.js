@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import Film1 from "./Film1.js";
-import Vehicles from "./article-photo.js";
 import Film2 from "./Film2.js";
 import Film3 from "./Film3.js";
 
@@ -17,9 +16,46 @@ class MainPage extends Component {
       showHidePic3: false,
       imgUrl: 0,
       imgHeight: 0,
+      theposition: 0,
     };
     this.hideComponent = this.hideComponent.bind(this);
   }
+
+  componentDidMount() {
+    window.addEventListener("scroll", this.listenToScroll);
+  }
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.listenToScroll);
+  }
+
+  listenToScroll = () => {
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+
+    const height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+
+    var scrolled = (winScroll / height) * 10;
+    var headerBg = document.getElementById("blah");
+    let pic = this.state.imgUrl;
+    let imgHeight = this.state.imgHeight;
+    window.addEventListener("scroll", function () {
+      headerBg.style.background =
+        "linear-gradient(rgba(31, 30, 27, " +
+        scrolled +
+        "), rgba(31, 30, 27, " +
+        scrolled +
+        ")), url(" +
+        pic +
+        ") 0px 0px/100% " +
+        imgHeight +
+        " no-repeat fixed";
+    });
+
+    console.log(headerBg.style.background);
+    console.log(scrolled);
+  };
 
   hideComponent(name) {
     console.log(name);
@@ -29,7 +65,6 @@ class MainPage extends Component {
           showHideDemo1: true,
           showHideDemo2: false,
           showHideDemo3: false,
-          showHidePic2: false,
           imgUrl: require("../assets/women_header.png"),
           imgHeight: "900px",
         });
@@ -39,9 +74,8 @@ class MainPage extends Component {
           showHideDemo1: false,
           showHideDemo2: true,
           showHideDemo3: false,
-          showHidePic2: true,
           imgUrl: require("../assets/asian_header.png"),
-          imgHeight: "1600px",
+          imgHeight: "1300px",
         });
         console.log(this.state);
         break;
@@ -50,9 +84,8 @@ class MainPage extends Component {
           showHideDemo1: false,
           showHideDemo2: false,
           showHideDemo3: true,
-          showHidePic2: false,
           imgUrl: require("../assets/black_header.png"),
-          imgHeight: "875px",
+          imgHeight: "900px",
         });
         break;
       default:
@@ -65,46 +98,39 @@ class MainPage extends Component {
       showHideDemo1,
       showHideDemo2,
       showHideDemo3,
-      showHidePic2,
       imgUrl,
       imgHeight,
     } = this.state;
 
     const divStyle = {
-      backgroundImage: "url(" + imgUrl + ")",
-      backgroundPosition: "top-center",
-      backgroundAttachment: "fixed",
-      backgroundRepeat: "no-repeat",
-      height: imgHeight,
-      backgroundSize: "100%",
-      width: "100%",
+      background:
+        "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(" +
+        imgUrl +
+        ") 0px 0px/100% " +
+        imgHeight +
+        " no-repeat fixed ",
     };
 
     return (
-      <div>
-        <div id="blah" style={divStyle}>
-          <br></br>
-          <br></br>
-          <br></br>
+      <div id="blah" style={divStyle}>
+        <br></br>
+        <br></br>
+        <br></br>
 
-          {/* {showHidePic2 && <img id="asian-header" src={header}></img>} */}
-
-          <div class="row" id="article-links">
-            <a onClick={() => this.hideComponent("showHideDemo1")}>
-              Women Made Them. Viewers and Critics Liked Them. No One Nominated
-              Them.
-            </a>
-            <a onClick={() => this.hideComponent("showHideDemo2")}>
-              Why Do Asian-Americans Remain Largely Unseen in Film and
-              Television?
-            </a>
-            <a onClick={() => this.hideComponent("showHideDemo3")}>
-              How the Criterion Collection Crops Out African-American Directors
-            </a>
-            {showHideDemo1 && <Film1 />}
-            {showHideDemo2 && <Film2 />}
-            {showHideDemo3 && <Film3 />}
-          </div>
+        <div class="row" id="article-links">
+          <a onClick={() => this.hideComponent("showHideDemo1")}>
+            Women Made Them. Viewers and Critics Liked Them. No One Nominated
+            Them.
+          </a>
+          <a onClick={() => this.hideComponent("showHideDemo2")}>
+            Why Do Asian-Americans Remain Largely Unseen in Film and Television?
+          </a>
+          <a onClick={() => this.hideComponent("showHideDemo3")}>
+            How the Criterion Collection Crops Out African-American Directors
+          </a>
+          {showHideDemo1 && <Film1 />}
+          {showHideDemo2 && <Film2 />}
+          {showHideDemo3 && <Film3 />}
         </div>
       </div>
     );

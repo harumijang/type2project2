@@ -7,6 +7,8 @@ class Film3 extends Component {
         <div class="col-sm"></div>
         <div class="col-sm"></div>
         <div class="col-sm">
+          <br></br>
+
           <h4>NYT - KYLE BUCHANAN, REGGIE UGWU</h4>
           <p>
             <i>

@@ -7,6 +7,8 @@ class Film2 extends Component {
       <div class="row">
         <div class="col-sm"></div>
         <div class="col-sm">
+          <br></br>
+
           <h4>NYT - THESSALY LA FORCE</h4>
           <p>
             Their faces are familiar for the feelings of horror and shame they

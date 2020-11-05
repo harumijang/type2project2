@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import header from "../assets/asian_header.png";
 
 class Film2 extends Component {
   render() {

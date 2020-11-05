@@ -48,6 +48,7 @@ class Film1 extends Component {
     return (
       <div class="row">
         <div class="col-sm">
+          <br></br>
           <h4>NYT — NICOLE SPERLING, BROOKE BARNES</h4>
           <p>
             <i>

@@ -242,8 +242,10 @@ mark.red {
 }
 
 #article-photo {
-  position: absolute;
-  margin-left: -600px;
+  display: flex;
+  height: 20%;
+  width: 20%;
+  margin-left: 600px;
 }
 
 h4 {
@@ -255,18 +257,20 @@ h4 {
   font-family: "Courier New", Courier, monospace;
   font-size: 14px;
   margin-left: 20px;
+  text-align: left;
 }
 
 #article-links a {
   color: black;
   width: 33%;
   float: none;
-  text-align: center;
+  text-align: left;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 28px;
   font-family: var(--main-font);
   color: var(--accent-color);
+  line-height: 30px;
 }
 
 #article-links {
@@ -274,8 +278,22 @@ h4 {
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 20px;
+  padding-top: 275px;
 }
 
 #article-links a:hover {
   opacity: 0.6;
+}
+
+#asian-header {
+  width: 100%;
+  background-attachment: fixed;
+}
+
+#blah {
+  /* background: url("assets/asian_header.png");
+  background-position: center;
+  height: 1200px;
+  background-size: 100%;
+  width: 100%; */
 }

@@ -1,6 +1,4 @@
 import React from "react";
-import MainPage from "./components/MainPage";
-import Header from "./components/Header";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { BrowserRouter, Route, Link } from "react-router-dom";
@@ -15,7 +13,7 @@ function App() {
         <h2>add some background information here</h2>
         <h2>add some background information here</h2>
         <h2>add some background information here</h2>
-        <Link to="/main">
+        <Link to="/book">
           <h1>enter</h1>
         </Link>
       </div>

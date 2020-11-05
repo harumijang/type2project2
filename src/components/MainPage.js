@@ -11,12 +11,8 @@ class MainPage extends Component {
       showHideDemo1: false,
       showHideDemo2: false,
       showHideDemo3: false,
-      showHidePic1: false,
-      showHidePic2: false,
-      showHidePic3: false,
       imgUrl: 0,
       imgHeight: 0,
-      theposition: 0,
     };
     this.hideComponent = this.hideComponent.bind(this);
   }
@@ -52,9 +48,6 @@ class MainPage extends Component {
         imgHeight +
         " no-repeat fixed";
     });
-
-    console.log(headerBg.style.background);
-    console.log(scrolled);
   };
 
   hideComponent(name) {
@@ -84,7 +77,7 @@ class MainPage extends Component {
           showHideDemo1: false,
           showHideDemo2: false,
           showHideDemo3: true,
-          imgUrl: require("../assets/black_header.png"),
+          imgUrl: require("../assets/criterion_header.png"),
           imgHeight: "900px",
         });
         break;

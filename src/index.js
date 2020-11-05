@@ -8,13 +8,12 @@ import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import Film1 from "./components/Film1";
 import Film2 from "./components/Film2";
 import Film3 from "./components/Film3";
-import Vehicles from "./components/article-photo";
 
 const routing = (
   <Router>
     <div>
       <Route exact path="/" component={App} />
-      <Route path="/main" component={MainPage} />
+      <Route path="/book" component={MainPage} />
       <Route path="/film1" component={Film1} />
       <Route path="/film2" component={Film2} />
       <Route path="/film3" component={Film3} />

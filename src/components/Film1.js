@@ -47,7 +47,7 @@ class Film1 extends Component {
 
     return (
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm" id="film1box">
           <br></br>
           <h4>NYT — NICOLE SPERLING, BROOKE BARNES</h4>
           <p>
@@ -72,10 +72,9 @@ class Film1 extends Component {
             A.W.O.L. from the list of Golden Globe nominees. The Screen Actors
             Guild was similarly exclusionary on Wednesday, leaving out Greta
             {this.redText("Gerwig’s", 1)}
-            {opened[1] && this.redPhoto(f1)}
             “Little Women” and Lulu
             {this.redText("Wang's", 0)}
-            {opened[0] && this.redPhoto(f0)}“The Farewell.”
+            “The Farewell.”
           </p>
           <p>
             Academy Awards handicappers predict that female filmmakers will also
@@ -101,7 +100,6 @@ class Film1 extends Component {
           <p>
             “The Farewell,” directed and written by Wang, and Olivia
             {this.redText("Wilde’s", 2)}
-            {opened[2] && this.redPhoto(f2)}
             directorial debut, “Booksmart,” both received better reviews (as
             assessed by scores on Rotten Tomatoes) than the three Oscar
             front-runners: Quentin Tarantino’s “Once Upon a Time … in
@@ -130,16 +128,15 @@ class Film1 extends Component {
             term on Google.)
           </p>
           <p>
-            Asked why Margot{this.redText("Robbie", 3)}
-            {opened[3] && this.redPhoto(f3)}had so few lines in “Once Upon a
-            Time … in Hollywood,” Quentin Tarantino dismissed the question.
-            Women only exist on the edges in “Uncut Gems,” which stars Adam
-            Sandler as an adrenaline-fueled diamond dealer. “Richard Jewell,”
-            Clint Eastwood’s film about the 1996 Olympics bombing, finds a
-            reporter (played by Wilde) offering sex to an F.B.I. agent in return
-            for information. The car racing drama “Ford v Ferrari” is the story
-            of two men; “The Lighthouse,” a black and white thriller, is the
-            story of two men; “The Two Popes” is the story of two men; “A
+            Asked why Margot{this.redText("Robbie", 3)} had so few lines in
+            “Once Upon a Time … in Hollywood,” Quentin Tarantino dismissed the
+            question. Women only exist on the edges in “Uncut Gems,” which stars
+            Adam Sandler as an adrenaline-fueled diamond dealer. “Richard
+            Jewell,” Clint Eastwood’s film about the 1996 Olympics bombing,
+            finds a reporter (played by Wilde) offering sex to an F.B.I. agent
+            in return for information. The car racing drama “Ford v Ferrari” is
+            the story of two men; “The Lighthouse,” a black and white thriller,
+            is the story of two men; “The Two Popes” is the story of two men; “A
             Beautiful Day in the Neighborhood” is the story of two men.
             (“Beautiful Day” was at least directed by a woman: Marielle Heller.)
           </p>
@@ -256,7 +253,13 @@ class Film1 extends Component {
           <p>“Hollywood is cracking open its gates to let us in,” she said.</p>
           <p>If only the awards institutions would do the same.</p>
         </div>
-        <div class="col-sm"></div>
+        <div class="col-sm" id="fake2">
+          {" "}
+          {opened[1] && this.redPhoto(f1)}
+          {opened[0] && this.redPhoto(f0)}
+          {opened[2] && this.redPhoto(f2)}
+          {opened[3] && this.redPhoto(f3)}
+        </div>
         <div class="col-sm"></div>
       </div>
     );

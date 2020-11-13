@@ -59,7 +59,7 @@ class MainPage extends Component {
           showHideDemo2: false,
           showHideDemo3: false,
           imgUrl: require("../assets/women_header.png"),
-          imgHeight: "900px",
+          imgHeight: "auto",
         });
         break;
       case "showHideDemo2":
@@ -68,7 +68,7 @@ class MainPage extends Component {
           showHideDemo2: true,
           showHideDemo3: false,
           imgUrl: require("../assets/asian_header.png"),
-          imgHeight: "1300px",
+          imgHeight: "auto",
         });
         console.log(this.state);
         break;
@@ -78,7 +78,7 @@ class MainPage extends Component {
           showHideDemo2: false,
           showHideDemo3: true,
           imgUrl: require("../assets/criterion_header.png"),
-          imgHeight: "900px",
+          imgHeight: "auto",
         });
         break;
       default:
@@ -101,11 +101,12 @@ class MainPage extends Component {
         imgUrl +
         ") 0px 0px/100% " +
         imgHeight +
-        " no-repeat fixed ",
+        " no-repeat",
+      maxWidth: "100%",
     };
 
     return (
-      <div id="blah" style={divStyle}>
+      <div id="blah" class="container" style={divStyle}>
         <br></br>
         <br></br>
         <br></br>

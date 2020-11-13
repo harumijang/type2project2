@@ -6,7 +6,7 @@ class Film2 extends Component {
     return (
       <div class="row">
         <div class="col-sm"></div>
-        <div class="col-sm">
+        <div class="col-sm" id="film2box">
           <br></br>
 
           <h4>NYT - THESSALY LA FORCE</h4>

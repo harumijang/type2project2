@@ -244,8 +244,11 @@ mark.red {
 #article-photo {
   display: flex;
   height: 20%;
-  width: 20%;
-  margin-left: 600px;
+  /* width: 20%; */
+  position: fixed;
+  top: 72%;
+  left: 40%;
+  transform: translate(-50%, -50%);
 }
 
 h4 {
@@ -256,7 +259,6 @@ h4 {
   color: white;
   font-family: "Courier New", Courier, monospace;
   font-size: 14px;
-  margin-left: 20px;
   text-align: left;
 }
 
@@ -287,4 +289,16 @@ h4 {
 
 body {
   margin: 0px;
+}
+
+#film2box {
+  margin-left: 6px;
+}
+
+#film1box {
+  margin-left: 18px;
+}
+
+#film3box {
+  margin-right: 16px;
 }

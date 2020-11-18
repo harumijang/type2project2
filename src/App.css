@@ -302,3 +302,34 @@ body {
 #film3box {
   margin-right: 16px;
 }
+
+#timeline {
+  width: 97%;
+  position: center;
+  height: auto;
+  padding-left: 22px;
+}
+
+#graph1 {
+  height: 750px;
+  width: 80%;
+}
+
+#graph3 {
+  height: 750px;
+  width: 85%;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 1200ms ease-out, transform 600ms ease-out,
+    visibility 1200ms ease-out;
+  will-change: opacity, visibility;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}

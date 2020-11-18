@@ -4,12 +4,14 @@ import f0 from "../assets/f0.png";
 import f1 from "../assets/f1.jpg";
 import f2 from "../assets/f2.png";
 import f3 from "../assets/f3.jpg";
+import timeline from "../assets/p2_timeline.png";
 
 class Film1 extends Component {
   constructor(props) {
     super(props);
     this.state = {
       opened: [false, false, false],
+      imgUrl: require("../assets/p2_timeline.png"),
     };
     this.toggleBox = this.toggleBox.bind(this);
     this.redText = this.redText.bind(this);
@@ -43,7 +45,13 @@ class Film1 extends Component {
 
   render() {
     var { children } = this.props;
-    const { opened } = this.state;
+    const { opened, imgUrl } = this.state;
+
+    const divStyle = {
+      backgroundImage: "url(../assets/p2_timeline)",
+      width: "500px",
+      height: "500px",
+    };
 
     return (
       <div class="row">
@@ -261,6 +269,7 @@ class Film1 extends Component {
           {opened[3] && this.redPhoto(f3)}
         </div>
         <div class="col-sm"></div>
+        {/* <img id="timeline" src={timeline}></img> */}
       </div>
     );
   }

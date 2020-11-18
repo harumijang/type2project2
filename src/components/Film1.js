@@ -4,7 +4,6 @@ import f0 from "../assets/f0.png";
 import f1 from "../assets/f1.jpg";
 import f2 from "../assets/f2.png";
 import f3 from "../assets/f3.jpg";
-import timeline from "../assets/p2_timeline.png";
 
 class Film1 extends Component {
   constructor(props) {

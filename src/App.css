@@ -303,21 +303,21 @@ body {
   margin-right: 16px;
 }
 
-#timeline {
-  width: 97%;
+/* #timeline {
+  width: 85%;
   position: center;
   height: auto;
   padding-left: 22px;
-}
+} */
 
 #graph1 {
-  height: 750px;
+  height: auto;
   width: 80%;
 }
 
 #graph3 {
-  height: 750px;
-  width: 85%;
+  height: auto;
+  width: 80%;
 }
 
 .fade-in-section {
@@ -329,7 +329,52 @@ body {
   will-change: opacity, visibility;
 }
 .fade-in-section.is-visible {
-  opacity: 1;
+  opacity: 0.87;
   transform: none;
   visibility: visible;
+}
+
+a:hover {
+  color: rgb(232, 108, 108);
+}
+
+h2 {
+  border-right: solid 3px rgb(232, 108, 108);
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: var(--main-font);
+  font-size: 23px;
+  color: white;
+}
+
+/* Animation */
+h2 {
+  animation: animated-text 4s steps(29) 1s 1 normal both,
+    animated-cursor 600ms steps(29) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor {
+  from {
+    border-right-color: rgb(232, 108, 108);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+#app-title {
+  font-size: 60px;
 }

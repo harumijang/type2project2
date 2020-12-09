@@ -1,12 +1,63 @@
 import React, { Component } from "react";
-import header from "../assets/asian_header.png";
+import Vehicles from "./article-photo2.js";
+import chart from "../assets/asian_chart.png";
+import Modal from "../components/Modal.js";
+import a0 from "../assets/0.jpg";
+import a1 from "../assets/a1.jpg";
 
 class Film2 extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      opened: [false, false, false, false],
+    };
+    this.toggleBox = this.toggleBox.bind(this);
+    this.redText = this.redText.bind(this);
+    this.redPhoto = this.redPhoto.bind(this);
+  }
+
+  toggleBox(num) {
+    const newItems = [...this.state.opened];
+    newItems[num] = !newItems[num];
+    var i;
+    for (i = 0; i < newItems.length; i++) {
+      newItems[i] = false;
+    }
+    newItems[num] = true;
+
+    this.setState(() => {
+      return { opened: newItems };
+    });
+  }
+
+  redText(word, num) {
+    return (
+      <mark class="red" onClick={() => this.toggleBox(num)}>
+        {" "}
+        {word}
+      </mark>
+    );
+  }
+
+  redPhoto(photo) {
+    return (
+      <div class="boxContent">
+        <Vehicles photo={photo}></Vehicles>
+      </div>
+    );
+  }
+
   render() {
+    const { opened } = this.state;
+
     return (
       <div class="row">
         <div class="col-sm"></div>
         <div class="col-sm" id="film2box">
+          <Modal
+            img={chart}
+            text="USC's Annenberg Inclusion Initiative found that the percentage of Asian speaking characters in 2018's 100 highest-grossing movies was 8.2 percent."
+          ></Modal>
           <br></br>
 
           <h4>NYT - THESSALY LA FORCE</h4>
@@ -50,23 +101,24 @@ class Film2 extends Component {
             again but pack with you every time you move.
           </p>
           <p>
-            There are two I’ll mention here. The first was George Takei, a
-            Japanese-American, as the steadfast and levelheaded “Star Trek”
-            officer Hikaru Sulu. He spoke — I remember finding this remarkable,
-            and, in a way, I still do, given the show was created in 1966 —
-            without an accent. In a subsequent feature-length film, Sulu
-            eventually becomes captain of his own ship. He showed sound judgment
-            and character in times of danger. He led.
+            There are two I’ll mention here. The first was{" "}
+            {this.redText("George Takei", 0)},a Japanese-American, as the
+            steadfast and levelheaded “Star Trek” officer Hikaru Sulu. He spoke
+            — I remember finding this remarkable, and, in a way, I still do,
+            given the show was created in 1966 — without an accent. In a
+            subsequent feature-length film, Sulu eventually becomes captain of
+            his own ship. He showed sound judgment and character in times of
+            danger. He led.
           </p>
           <p>
-            Then there was Sandra Oh, a Korean-Canadian, as the enraged
-            Stephanie in 2004’s “Sideways,” who has a love affair with a
-            feckless man named Jack, played by Thomas Haden Church. She breaks
-            his nose after learning he is engaged to another woman; I had never
-            seen a Korean woman on-screen lose her temper within the proximity
-            of a Saab convertible and against the backdrop of a California
-            vineyard. Her anger was justified. Her emotions were real, not
-            cartoonish.
+            Then there was {this.redText("Sandra Oh", 1)}, a Korean-Canadian, as
+            the enraged Stephanie in 2004’s “Sideways,” who has a love affair
+            with a feckless man named Jack, played by Thomas Haden Church. She
+            breaks his nose after learning he is engaged to another woman; I had
+            never seen a Korean woman on-screen lose her temper within the
+            proximity of a Saab convertible and against the backdrop of a
+            California vineyard. Her anger was justified. Her emotions were
+            real, not cartoonish.
           </p>
           <p>
             Both performances let me understand that I didn’t have to ask to
@@ -385,6 +437,8 @@ class Film2 extends Component {
           </p>
         </div>
         <div class="col-sm"></div>
+        {opened[0] && this.redPhoto(a0)}
+        {opened[1] && this.redPhoto(a1)}
       </div>
     );
   }

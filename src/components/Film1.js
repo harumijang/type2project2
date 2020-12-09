@@ -4,13 +4,14 @@ import f0 from "../assets/f0.png";
 import f1 from "../assets/f1.jpg";
 import f2 from "../assets/f2.png";
 import f3 from "../assets/f3.jpg";
+import Modal from "../components/Modal.js";
+import chart from "../assets/women_chart.png";
 
 class Film1 extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      opened: [false, false, false],
-      imgUrl: require("../assets/p2_timeline.png"),
+      opened: [false, false, false, false],
     };
     this.toggleBox = this.toggleBox.bind(this);
     this.redText = this.redText.bind(this);
@@ -18,9 +19,15 @@ class Film1 extends Component {
   }
 
   toggleBox(num) {
-    this.setState((prevState) => {
-      const newItems = [...prevState.opened];
-      newItems[num] = !newItems[num];
+    const newItems = [...this.state.opened];
+    newItems[num] = !newItems[num];
+    var i;
+    for (i = 0; i < newItems.length; i++) {
+      newItems[i] = false;
+    }
+    newItems[num] = true;
+
+    this.setState(() => {
       return { opened: newItems };
     });
   }
@@ -43,14 +50,7 @@ class Film1 extends Component {
   }
 
   render() {
-    var { children } = this.props;
-    const { opened, imgUrl } = this.state;
-
-    const divStyle = {
-      backgroundImage: "url(../assets/p2_timeline)",
-      width: "500px",
-      height: "500px",
-    };
+    const { opened } = this.state;
 
     return (
       <div class="row">
@@ -73,6 +73,14 @@ class Film1 extends Component {
             But the current Oscar race has left her slack-jawed. Where are the
             women?
           </p>
+          <br></br>
+          <Modal
+            img={chart}
+            text="In the over 90-year history of the Oscars, only five women have been
+           nominated for the Academy Award for Best Director, with one female
+           winner, in 2010."
+          ></Modal>
+          <br></br>
           <p>
             “It’s like ‘The Empire Strikes Back,’” Cantillon said on Tuesday,
             after female directors and films starring women were largely
@@ -262,13 +270,12 @@ class Film1 extends Component {
         </div>
         <div class="col-sm" id="fake2">
           {" "}
-          {opened[1] && this.redPhoto(f1)}
           {opened[0] && this.redPhoto(f0)}
+          {opened[1] && this.redPhoto(f1)}
           {opened[2] && this.redPhoto(f2)}
           {opened[3] && this.redPhoto(f3)}
         </div>
         <div class="col-sm"></div>
-        {/* <img id="timeline" src={timeline}></img> */}
       </div>
     );
   }

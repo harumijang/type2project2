@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import chart from "../assets/criterion_chart.png";
+import Modal from "../components/Modal.js";
 
 class Film3 extends Component {
   render() {
@@ -17,6 +19,15 @@ class Film3 extends Component {
               largely shutting out Black Americans.
             </i>
           </p>
+          <br></br>
+          <Modal
+            img={chart}
+            text="There are 45 directors who have more films than there are Black
+            directors (US) in the Criterion. Only four Black directors (US) have
+            films featured in the collection."
+          ></Modal>
+          <br></br>
+
           <p>
             Linda Koulisis sensed an opportunity. It was September 2016, and
             Koulisis, a talent agent and former film producer based in Los

@@ -51,6 +51,9 @@ class Film1 extends Component {
 
   render() {
     const { opened } = this.state;
+    const text =
+      "In the over 90-year history of the Oscars, only five women have been nominated for the Academy Award for Best Director, with one female winner, in 2010." +
+      "\n";
 
     return (
       <div class="row">
@@ -74,12 +77,7 @@ class Film1 extends Component {
             women?
           </p>
           <br></br>
-          <Modal
-            img={chart}
-            text="In the over 90-year history of the Oscars, only five women have been
-           nominated for the Academy Award for Best Director, with one female
-           winner, in 2010."
-          ></Modal>
+          <Modal img={chart} text={text}></Modal>
           <br></br>
           <p>
             “It’s like ‘The Empire Strikes Back,’” Cantillon said on Tuesday,

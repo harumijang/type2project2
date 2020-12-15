@@ -56,7 +56,7 @@ class Film2 extends Component {
         <div class="col-sm" id="film2box">
           <Modal
             img={chart}
-            text="USC's Annenberg Inclusion Initiative found that the percentage of Asian speaking characters in 2018's 100 highest-grossing movies was 8.2 percent."
+            text="USC’s Annenberg Inclusion Initiative found that the percentage of Asian speaking characters in 2018’s 100 highest-grossing movies was 8.2 percent."
           ></Modal>
           <br></br>
 

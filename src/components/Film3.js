@@ -22,9 +22,8 @@ class Film3 extends Component {
           <br></br>
           <Modal
             img={chart}
-            text="There are 45 directors who have more films than there are Black
-            directors (US) in the Criterion. Only four Black directors (US) have
-            films featured in the collection."
+            text="There are 45 directors who have more films than there are Black directors (US) in the Criterion. Only four Black directors (US) have films featured in 
+the collection."
           ></Modal>
           <br></br>
 

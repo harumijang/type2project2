@@ -11,7 +11,7 @@ class MainPage extends Component {
       showHideDemo1: false,
       showHideDemo2: false,
       showHideDemo3: false,
-      imgUrl: 0,
+      imgUrl: require("../assets/combined_header.png"),
       imgHeight: 0,
       imgUrlGraph: 0,
       clickCount: 0,
@@ -52,10 +52,11 @@ class MainPage extends Component {
             showHideDemo1: true,
             showHideDemo2: false,
             showHideDemo3: false,
-            imgUrl: require("../assets/women_header1.png"),
-            imgHeight: "1000px",
+            // imgUrl: require("../assets/combined_header.png"),
+            // imgHeight: "1300px",
           },
-          () => window.scrollTo(0, 0)
+          () => window.scrollTo(0, 1300),
+          (document.getElementById("blocker").style.height = "0px")
         );
         break;
       case "showHideDemo2":
@@ -64,10 +65,11 @@ class MainPage extends Component {
             showHideDemo1: false,
             showHideDemo2: true,
             showHideDemo3: false,
-            imgUrl: require("../assets/asian_header.png"),
-            imgHeight: "1200px",
+            // imgUrl: require("../assets/combined_header.png"),
+            // imgHeight: "1300px",
           },
-          () => window.scrollTo(0, 1200)
+          () => window.scrollTo(0, 1300),
+          (document.getElementById("blocker").style.height = "0px")
         );
 
         console.log(this.state);
@@ -78,10 +80,11 @@ class MainPage extends Component {
             showHideDemo1: false,
             showHideDemo2: false,
             showHideDemo3: true,
-            imgUrl: require("../assets/criterion_header.png"),
-            imgHeight: "1000px",
+            // imgUrl: require("../assets/combined_header.png"),
+            // imgHeight: "1300px",
           },
-          () => window.scrollTo(0, 1000)
+          () => window.scrollTo(0, 1300),
+          (document.getElementById("blocker").style.height = "0px")
         );
         break;
       default:
@@ -102,7 +105,7 @@ class MainPage extends Component {
 
     const divStyle = {
       backgroundImage: "url(" + imgUrl + ")",
-      height: imgHeight,
+      height: "1300px",
     };
 
     return (
@@ -120,6 +123,7 @@ class MainPage extends Component {
             How the Criterion Collection Crops Out African-American Directors
           </a>
         </div>
+        <div id="blocker"></div>
         <div>
           {showHideDemo1 && <Film1 />}
           {showHideDemo2 && <Film2 />}

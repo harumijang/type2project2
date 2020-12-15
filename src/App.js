@@ -22,27 +22,6 @@ function App() {
   return (
     <div>
       <MainPage></MainPage>
-      {/* <div className="Home">
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <h1 id="app-title">The Diversity Problem in the Film Industry</h1>
-        <br></br>
-        <br></br>
-        <h2 id="blurb">
-          Hollywood still remains as white, straight, and male as ever.
-        </h2>
-        <br></br>
-        <h3>add background info about new york times articles</h3>
-        <h3>add background info about new york times articles</h3>
-        <div />
-        <br></br>
-        <br></br>
-        <Link to="/book">
-          <h1>ENTER</h1>
-        </Link>
-      </div> */}
     </div>
   );
 }

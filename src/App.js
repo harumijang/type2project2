@@ -1,7 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import { BrowserRouter, Route, Link } from "react-router-dom";
 import MainPage from "./components/MainPage";
 
 var i = 0;

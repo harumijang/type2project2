@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import Film1 from "./Film1.js";
 import Film2 from "./Film2.js";
 import Film3 from "./Film3.js";

@@ -15,7 +15,6 @@
     "react-popupbox": "^2.0.8",
     "react-scripts": "3.4.1"
   },
-  "homepage": "https://harumijang.github.io/type2project2",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

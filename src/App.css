@@ -442,6 +442,7 @@ h3 {
 
 #header {
   width: 100%;
+  background-image: url("./assets/combined_header.png");
   background-attachment: fixed;
   /* background-position: center; */
   background-repeat: no-repeat;

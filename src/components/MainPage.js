@@ -103,7 +103,8 @@ class MainPage extends Component {
     } = this.state;
 
     const divStyle = {
-      backgroundImage: "url(" + imgUrl + ")",
+      // backgroundImage: "url(" + imgUrl + ")",
+      // backgroundImage: 'url("../assets/combined_header.png")',
       height: "1300px",
     };
 

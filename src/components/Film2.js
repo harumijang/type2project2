@@ -4,12 +4,64 @@ import chart from "../assets/asian_chart.png";
 import Modal from "../components/Modal.js";
 import a0 from "../assets/0.jpg";
 import a1 from "../assets/a1.jpg";
+import a2 from "../assets/a2.jpg";
+import a3 from "../assets/a3.jpg";
+import a4 from "../assets/a4.jpg";
+import a5 from "../assets/a5.png";
+import a6 from "../assets/a6.jpg";
+import a7 from "../assets/a7.jpg";
+import a8 from "../assets/a8.jpeg";
+import a9 from "../assets/a9.jpg";
+import a10 from "../assets/a10.jpg";
+import a11 from "../assets/a11.jpg";
+import a12 from "../assets/a12.jpeg";
+import a13 from "../assets/a13.jpg";
+import a14 from "../assets/a14.jpg";
+import a15 from "../assets/a15.jpg";
+import a16 from "../assets/a16.jpg";
+import a17 from "../assets/a17.jpg";
+import a18 from "../assets/a18.jpg";
+import a19 from "../assets/a19.png";
+import a20 from "../assets/a20.jpg";
+import a21 from "../assets/a21.jpg";
+import a22 from "../assets/a22.jpg";
+import a23 from "../assets/a23.jpg";
+import a24 from "../assets/a24.jpg";
+import a25 from "../assets/a25.jpg";
+import a26 from "../assets/a26.jpeg";
 
 class Film2 extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      opened: [false, false, false, false],
+      opened: [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+      ],
     };
     this.toggleBox = this.toggleBox.bind(this);
     this.redText = this.redText.bind(this);
@@ -33,7 +85,6 @@ class Film2 extends Component {
   redText(word, num) {
     return (
       <mark class="red" onClick={() => this.toggleBox(num)}>
-        {" "}
         {word}
       </mark>
     );
@@ -87,11 +138,13 @@ class Film2 extends Component {
             anticipate the pause in a conversation with strangers as I watch
             them — like someone calculating the size of someone else’s apartment
             — square the fact of my ethnicity with my appearance. I have never
-            quite seen myself on-screen. Maybe in Keanu Reeves or Olivia Munn,
-            but even so, the side of myself that is understood as Asian — that
-            is seen — is as washed away as theirs, and that is because we live
-            in a world that doesn’t make time for ambiguity, that continues to
-            reward whiteness with privilege.
+            quite seen myself on-screen. Maybe in{" "}
+            {this.redText("Keanu Reeves", 2)} or{" "}
+            {this.redText("Olivia Munn", 3)}, but even so, the side of myself
+            that is understood as Asian — that is seen — is as washed away as
+            theirs, and that is because we live in a world that doesn’t make
+            time for ambiguity, that continues to reward whiteness with
+            privilege.
           </p>
           <p>
             Having been raised on a mediocre diet of American television and
@@ -102,7 +155,7 @@ class Film2 extends Component {
           </p>
           <p>
             There are two I’ll mention here. The first was{" "}
-            {this.redText("George Takei", 0)},a Japanese-American, as the
+            {this.redText("George Takei", 0)}, a Japanese-American, as the
             steadfast and levelheaded “Star Trek” officer Hikaru Sulu. He spoke
             — I remember finding this remarkable, and, in a way, I still do,
             given the show was created in 1966 — without an accent. In a
@@ -130,24 +183,26 @@ class Film2 extends Component {
           <p>
             THERE HAVE BEEN attempts by Hollywood to insert real people of color
             — in this case, Asian-Americans — into the cultural landscape of
-            film and television. Most recently, Daniel Wu was cast as Lu Ren in
-            this year’s “Tomb Raider,” starring Alicia Vikander. He was as
-            good-looking as he was complicated, but where typically there might
-            have been some chemistry between two young and beautiful people
-            embarking on a grand adventure, Wu was relegated by the end to the
-            benign, if handsome, friend. The television reboot “Hawaii Five-0”
-            has added more nuanced Asian characters who were missing from the
-            original version, played by actors such as Grace Park, Daniel Dae
-            Kim or Masi Oka, and newer creations, including “Silicon Valley,”
-            have cast Jimmy O. Yang and Kumail Nanjiani in stereotypical but
-            still more rewardingly complex supporting roles (Yang plays a
-            ruthless if talentless app developer; Nanjiani, as a software
-            engineer, steals the scene in nearly every episode). But these are
-            still small changes, and this so-called progress rings hollow. You
-            remain unlikely to see Asian-Americans in lead roles in big studios
-            films without the hint of tokenism, even after the box office
-            success of this year’s “Crazy Rich Asians,” the first studio film
-            with an all-Asian cast since “The Joy Luck Club” in 1993.
+            film and television. Most recently, {this.redText("Daniel Wu", 4)}{" "}
+            was cast as Lu Ren in this year’s “Tomb Raider,” starring Alicia
+            Vikander. He was as good-looking as he was complicated, but where
+            typically there might have been some chemistry between two young and
+            beautiful people embarking on a grand adventure, Wu was relegated by
+            the end to the benign, if handsome, friend. The television reboot
+            “Hawaii Five-0” has added more nuanced Asian characters who were
+            missing from the original version, played by actors such as{" "}
+            {this.redText("Grace Park", 5)}, {this.redText("Daniel Dae Kim", 6)}{" "}
+            or {this.redText("Masi Oka", 7)}, and newer creations, including
+            “Silicon Valley,” have cast {this.redText("Jimmy O. Yang ", 8)}
+            and {this.redText("Kumail Nanjiani", 9)} in stereotypical but still
+            more rewardingly complex supporting roles (Yang plays a ruthless if
+            talentless app developer; Nanjiani, as a software engineer, steals
+            the scene in nearly every episode). But these are still small
+            changes, and this so-called progress rings hollow. You remain
+            unlikely to see Asian-Americans in lead roles in big studios films
+            without the hint of tokenism, even after the box office success of
+            this year’s “Crazy Rich Asians,” the first studio film with an
+            all-Asian cast since “The Joy Luck Club” in 1993.
           </p>
           <p>
             Representation of Asians within American performing arts has always
@@ -157,46 +212,54 @@ class Film2 extends Component {
             roles in Hollywood (the 2017 United States Census Bureau reported
             that there are 18 million Americans of Asian descent, or roughly 6
             percent of the population). Only one actor of Asian heritage has
-            ever won an Academy Award for best actor: Ben Kingsley, whose father
-            was Indian, in 1983 for playing Gandhi (Kingsley has been nominated
-            in three other instances). Twelve actors of Asian descent have ever
-            received nominations from the academy — all largely for supporting
-            roles, with the exception of Merle Oberon, who was half British and
-            half Sri Lankan, in 1936. The others include the Japanese-American
-            actor Pat Morita; the Cambodian actor Haing S. Ngor; the Japanese
-            actors Mako Iwamatsu, Ken Watanabe, Rinko Kikuchi and Sessue
-            Hayakawa; the Chinese-American actresses and sisters Jennifer and
-            Meg Tilly; the Filipino-American actress Hailee Steinfeld; and the
-            British-Indian actor Dev Patel. This year, Sandra Oh made history as
-            the first woman of Asian descent to be nominated for an Emmy for the
-            lead in a dramatic series, as Eve Polastri in “Killing Eve.” And
-            earlier this year, the Indian-American actor Aziz Ansari was awarded
+            ever won an Academy Award for best actor:{" "}
+            {this.redText("Ben Kingsley", 10)}, whose father was Indian, in 1983
+            for playing Gandhi (Kingsley has been nominated in three other
+            instances). Twelve actors of Asian descent have ever received
+            nominations from the academy — all largely for supporting roles,
+            with the exception of {this.redText("Merle Oberon", 11)}, who was
+            half British and half Sri Lankan, in 1936. The others include the
+            Japanese-American actor {this.redText("Pat Morita", 12)}; the
+            Cambodian actor {this.redText("Haing S. Ngor", 13)}; the Japanese
+            actors {this.redText("Mako Iwamatsu", 14)},{" "}
+            {this.redText("Ken Watanabe", 15)},{" "}
+            {this.redText("Rinko Kikuchi", 16)} and
+            {this.redText(" Sessue Hayakawa", 17)}; the Chinese-American
+            actresses and sisters {this.redText("Jennifer and Meg Tilly", 18)};
+            the Filipino-American actress {this.redText("Hailee Steinfeld", 19)}
+            ; and the British-Indian actor {this.redText("Dev Patel", 20)}. This
+            year, Sandra Oh made history as the first woman of Asian descent to
+            be nominated for an Emmy for the lead in a dramatic series, as Eve
+            Polastri in “Killing Eve.” And earlier this year, the
+            Indian-American actor {this.redText("Aziz Ansari", 21)} was awarded
             best actor for a TV comedy by the Golden Globes, the first actor of
             Asian descent to do so. When “Saturday Night Live” announced that
-            the actor Awkwafina would host the show this past October, it was
-            noted that the last woman of Asian descent to host was Lucy Liu in
-            2000, 18 years ago. The New York Times recently reported that in the
-            search for the male lead in “Crazy Rich Asians,” one of the movie’s
-            producers was told by several prominent American theater schools
-            that they hadn’t had a male Asian graduate in years. A study by
-            multiple universities reported that, over a one-year period, of the
-            242 scripted shows on broadcast, cable and streaming TV, just
-            one-third had a series regular who was Asian-American or Pacific
-            Islander. These are shows, mind you, set in cities such as San
-            Francisco, New York and Los Angeles, which all have significant
-            Asian-American and Pacific Islander populations (33 percent, 12
-            percent and 24 percent, respectively). And another report by the
-            U.S.C. Annenberg Inclusion Initiative stated that of the top 100
-            films of last year, 37 didn’t include a single Asian character with
-            a speaking role.
+            the actor {this.redText("Awkwafina", 22)} would host the show this
+            past October, it was noted that the last woman of Asian descent to
+            host was {this.redText("Lucy Liu", 23)} in 2000, 18 years ago. The
+            New York Times recently reported that in the search for the male
+            lead in “Crazy Rich Asians,” one of the movie’s producers was told
+            by several prominent American theater schools that they hadn’t had a
+            male Asian graduate in years. A study by multiple universities
+            reported that, over a one-year period, of the 242 scripted shows on
+            broadcast, cable and streaming TV, just one-third had a series
+            regular who was Asian-American or Pacific Islander. These are shows,
+            mind you, set in cities such as San Francisco, New York and Los
+            Angeles, which all have significant Asian-American and Pacific
+            Islander populations (33 percent, 12 percent and 24 percent,
+            respectively). And another report by the U.S.C. Annenberg Inclusion
+            Initiative stated that of the top 100 films of last year, 37 didn’t
+            include a single Asian character with a speaking role.
           </p>
           <p>
             Yet elsewhere in the arts, Asian-Americans have flourished: as
             poets, writers, directors, photographers, fashion designers,
             architects, interior decorators and visual artists. The creative
-            offerings of Asian-Americans — from Vera Wang’s fantasy wedding
-            dresses to the fiction of Jhumpa Lahiri to the haunting
-            cinematography of Hiro Murai, the director of Donald Glover’s
+            offerings of Asian-Americans — from{" "}
+            {this.redText("Vera Wang’s", 24)}
+            fantasy wedding dresses to the fiction of{" "}
+            {this.redText("Jhumpa Lahiri", 25)} to the haunting cinematography
+            of {this.redText("Hiro Murai", 26)}, the director of Donald Glover’s
             television show “Atlanta” — aren’t just accepted but celebrated.
             Only in the representational arts do Asians remain unseen — mostly
             in film and television, but in music, too, and, to a lesser degree,
@@ -439,6 +502,31 @@ class Film2 extends Component {
         <div class="col-sm"></div>
         {opened[0] && this.redPhoto(a0)}
         {opened[1] && this.redPhoto(a1)}
+        {opened[2] && this.redPhoto(a2)}
+        {opened[3] && this.redPhoto(a3)}
+        {opened[4] && this.redPhoto(a4)}
+        {opened[5] && this.redPhoto(a5)}
+        {opened[6] && this.redPhoto(a6)}
+        {opened[7] && this.redPhoto(a7)}
+        {opened[8] && this.redPhoto(a8)}
+        {opened[9] && this.redPhoto(a9)}
+        {opened[10] && this.redPhoto(a10)}
+        {opened[11] && this.redPhoto(a11)}
+        {opened[12] && this.redPhoto(a12)}
+        {opened[13] && this.redPhoto(a13)}
+        {opened[14] && this.redPhoto(a14)}
+        {opened[15] && this.redPhoto(a15)}
+        {opened[16] && this.redPhoto(a16)}
+        {opened[17] && this.redPhoto(a17)}
+        {opened[18] && this.redPhoto(a18)}
+        {opened[19] && this.redPhoto(a19)}
+        {opened[20] && this.redPhoto(a20)}
+        {opened[21] && this.redPhoto(a21)}
+        {opened[22] && this.redPhoto(a22)}
+        {opened[23] && this.redPhoto(a23)}
+        {opened[24] && this.redPhoto(a24)}
+        {opened[25] && this.redPhoto(a25)}
+        {opened[26] && this.redPhoto(a26)}
       </div>
     );
   }

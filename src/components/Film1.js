@@ -4,6 +4,18 @@ import f0 from "../assets/f0.png";
 import f1 from "../assets/f1.jpg";
 import f2 from "../assets/f2.png";
 import f3 from "../assets/f3.jpg";
+import f4 from "../assets/f4.jpg";
+import f5 from "../assets/f5.jpg";
+import f6 from "../assets/f6.jpg";
+import f7 from "../assets/f7.jpg";
+import f8 from "../assets/f8.jpeg";
+import f9 from "../assets/f9.jpg";
+import f10 from "../assets/f10.jpg";
+import f11 from "../assets/f11.jpg";
+import f12 from "../assets/f12.jpg";
+import f13 from "../assets/f13.jpeg";
+import f14 from "../assets/f14.jpg";
+import f15 from "../assets/f15.jpg";
 import Modal from "../components/Modal.js";
 import chart from "../assets/women_chart.png";
 
@@ -11,7 +23,24 @@ class Film1 extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      opened: [false, false, false, false],
+      opened: [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+      ],
     };
     this.toggleBox = this.toggleBox.bind(this);
     this.redText = this.redText.bind(this);
@@ -35,8 +64,7 @@ class Film1 extends Component {
   redText(word, num) {
     return (
       <mark class="red" onClick={() => this.toggleBox(num)}>
-        {" "}
-        {word}{" "}
+        {word}
       </mark>
     );
   }
@@ -83,10 +111,10 @@ class Film1 extends Component {
             “It’s like ‘The Empire Strikes Back,’” Cantillon said on Tuesday,
             after female directors and films starring women were largely
             A.W.O.L. from the list of Golden Globe nominees. The Screen Actors
-            Guild was similarly exclusionary on Wednesday, leaving out Greta
-            {this.redText("Gerwig’s", 1)}
-            “Little Women” and Lulu
-            {this.redText("Wang's", 0)}
+            Guild was similarly exclusionary on Wednesday, leaving out
+            {this.redText(" Greta Gerwig’s ", 1)}
+            “Little Women” and
+            {this.redText(" Lulu Wang's ", 0)}
             “The Farewell.”
           </p>
           <p>
@@ -111,8 +139,8 @@ class Film1 extends Component {
             there are many worthy candidates.
           </p>
           <p>
-            “The Farewell,” directed and written by Wang, and Olivia
-            {this.redText("Wilde’s", 2)}
+            “The Farewell,” directed and written by Wang, and
+            {this.redText(" Olivia Wilde’s ", 2)}
             directorial debut, “Booksmart,” both received better reviews (as
             assessed by scores on Rotten Tomatoes) than the three Oscar
             front-runners: Quentin Tarantino’s “Once Upon a Time … in
@@ -120,13 +148,15 @@ class Film1 extends Component {
             “The Irishman.”
           </p>
           <p>
-            Lorene Scafaria’s “Hustlers,” starring Constance Wu and Jennifer
-            Lopez, collected $150 million at the worldwide box office and
-            provided a cogent account of the financial crisis. “Queen & Slim,”
-            Melina Matsoukas’s fugitive thriller, gave us a new leading lady in
-            Jodie Turner-Smith and a new language to discuss the black
-            experience. “Little Women,” written and directed by Gerwig, is a
-            subversive new take on a classic novel.
+            {this.redText(" Lorene Scafaria’s ", 4)} “Hustlers,” starring{" "}
+            {this.redText(" Constance Wu ", 5)} and
+            {this.redText(" Jennifer Lopez", 6)}, collected $150 million at the
+            worldwide box office and provided a cogent account of the financial
+            crisis. “Queen & Slim,” {this.redText(" Melina Matsoukas’s", 7)}{" "}
+            fugitive thriller, gave us a new leading lady in{" "}
+            {this.redText(" Jodie Turner-Smith", 8)} and a new language to
+            discuss the black experience. “Little Women,” written and directed
+            by Gerwig, is a subversive new take on a classic novel.
           </p>
           <p>
             They are just a handful of the dozen films from women directors sure
@@ -137,11 +167,11 @@ class Film1 extends Component {
             sidelining of women in films like “The Irishman,” which meanders
             along for three-and-a-half hours but finds little for female
             characters to do except smoke cigarettes and stare quietly from the
-            sidelines. (“Anna Paquin’s line in ‘The Irishman’” is a top search
-            term on Google.)
+            sidelines. (“{this.redText("Anna Paquin’s", 9)} line in ‘The
+            Irishman’” is a top search term on Google.)
           </p>
           <p>
-            Asked why Margot{this.redText("Robbie", 3)} had so few lines in
+            Asked why {this.redText(" Margot Robbie", 3)} had so few lines in
             “Once Upon a Time … in Hollywood,” Quentin Tarantino dismissed the
             question. Women only exist on the edges in “Uncut Gems,” which stars
             Adam Sandler as an adrenaline-fueled diamond dealer. “Richard
@@ -151,7 +181,8 @@ class Film1 extends Component {
             the story of two men; “The Lighthouse,” a black and white thriller,
             is the story of two men; “The Two Popes” is the story of two men; “A
             Beautiful Day in the Neighborhood” is the story of two men.
-            (“Beautiful Day” was at least directed by a woman: Marielle Heller.)
+            (“Beautiful Day” was at least directed by a woman:{" "}
+            {this.redText(" Marielle Heller", 10)}.)
           </p>
           <p>
             “There is a systemic belief that stories about men matter more than
@@ -250,18 +281,19 @@ class Film1 extends Component {
           </p>
           <p>
             The unstated theme was sisterhood. The power list is no longer
-            ranked. Honoree Reese Witherspoon proclaimed her relief that her
-            days of being the only woman on a set of a 150 men were thankfully
-            well in her rear view, thanks both to her growing clout as a
-            producer and her realization that for much of her career she had
-            been siloed from other women. And Wilde, who will direct a thriller
-            for New Line and a comedy for Universal Pictures as her “Booksmart”
-            follow-ups, kicked off the festivities with a rousing speech that
-            name-checked a slew of female filmmakers that inspired her this
-            year, including all of the women mentioned above in addition to Alma
-            Har’el (“Honey Boy”), Ava DuVernay (“When They See Us”), Elizabeth
-            Banks (“Charlie’s Angels”) and Laure de Clermont-Tonnerre (“The
-            Mustang”).
+            ranked. Honoree {this.redText("Reese Witherspoon.", 11)} proclaimed
+            her relief that her days of being the only woman on a set of a 150
+            men were thankfully well in her rear view, thanks both to her
+            growing clout as a producer and her realization that for much of her
+            career she had been siloed from other women. And Wilde, who will
+            direct a thriller for New Line and a comedy for Universal Pictures
+            as her “Booksmart” follow-ups, kicked off the festivities with a
+            rousing speech that name-checked a slew of female filmmakers that
+            inspired her this year, including all of the women mentioned above
+            in addition to {this.redText("Alma Har’el", 12)} (“Honey Boy”),
+            {this.redText(" Ava DuVernay", 13)} (“When They See Us”),{" "}
+            {this.redText("Elizabeth Banks", 14)} (“Charlie’s Angels”) and{" "}
+            {this.redText("Laure de Clermont-Tonnerre", 15)} (“The Mustang”).
           </p>
           <p>“Hollywood is cracking open its gates to let us in,” she said.</p>
           <p>If only the awards institutions would do the same.</p>
@@ -272,6 +304,18 @@ class Film1 extends Component {
           {opened[1] && this.redPhoto(f1)}
           {opened[2] && this.redPhoto(f2)}
           {opened[3] && this.redPhoto(f3)}
+          {opened[4] && this.redPhoto(f4)}
+          {opened[5] && this.redPhoto(f5)}
+          {opened[6] && this.redPhoto(f6)}
+          {opened[7] && this.redPhoto(f7)}
+          {opened[8] && this.redPhoto(f8)}
+          {opened[9] && this.redPhoto(f9)}
+          {opened[10] && this.redPhoto(f10)}
+          {opened[11] && this.redPhoto(f11)}
+          {opened[12] && this.redPhoto(f12)}
+          {opened[13] && this.redPhoto(f13)}
+          {opened[14] && this.redPhoto(f14)}
+          {opened[15] && this.redPhoto(f15)}
         </div>
         <div class="col-sm"></div>
       </div>

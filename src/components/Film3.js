@@ -1,13 +1,144 @@
 import React, { Component } from "react";
 import chart from "../assets/criterion_chart.png";
 import Modal from "../components/Modal.js";
+import Vehicles from "./article-photo3.js";
+import c0 from "../assets/c0.png";
+import c1 from "../assets/c1.jpeg";
+import c2 from "../assets/c2.jpg";
+import c3 from "../assets/c3.jpg";
+import c4 from "../assets/c4.jpg";
+import c5 from "../assets/c5.jpg";
+import c6 from "../assets/c6.jpg";
+import c7 from "../assets/c7.jpg";
+import c8 from "../assets/c8.jpg";
+import c9 from "../assets/c9.jpg";
+import c10 from "../assets/c10.png";
+import c11 from "../assets/c11.jpg";
+import c12 from "../assets/c12.jpg";
+import c13 from "../assets/f13.jpeg";
+import c14 from "../assets/c14.jpg";
+import c15 from "../assets/c15.jpg";
+import c16 from "../assets/c16.jpg";
+import c17 from "../assets/c17.jpg";
+import c18 from "../assets/c18.jpg";
+import c19 from "../assets/c19.jpg";
+import c20 from "../assets/c20.jpg";
+import c21 from "../assets/c21.jpg";
+import c22 from "../assets/c22.jpg";
+import c23 from "../assets/c23.jpg";
+import c24 from "../assets/c24.jpg";
+import c25 from "../assets/c25.jpg";
+import c26 from "../assets/c26.jpg";
+import c27 from "../assets/c27.jpg";
+import c28 from "../assets/c28.jpg";
 
 class Film3 extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      opened: [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+      ],
+    };
+    this.toggleBox = this.toggleBox.bind(this);
+    this.redText = this.redText.bind(this);
+    this.redPhoto = this.redPhoto.bind(this);
+  }
+
+  toggleBox(num) {
+    const newItems = [...this.state.opened];
+    newItems[num] = !newItems[num];
+    var i;
+    for (i = 0; i < newItems.length; i++) {
+      newItems[i] = false;
+    }
+    newItems[num] = true;
+
+    this.setState(() => {
+      return { opened: newItems };
+    });
+  }
+
+  redText(word, num) {
+    return (
+      <mark class="red" onClick={() => this.toggleBox(num)}>
+        {word}
+      </mark>
+    );
+  }
+
+  redPhoto(photo) {
+    return (
+      <div class="boxContent">
+        <Vehicles photo={photo}></Vehicles>
+      </div>
+    );
+  }
+
   render() {
+    const { opened } = this.state;
+
     return (
       <div class="row">
         <div class="col-sm"></div>
-        <div class="col-sm"></div>
+        <div class="col-sm">
+          {opened[0] && this.redPhoto(c0)}
+          {opened[1] && this.redPhoto(c1)}
+          {opened[2] && this.redPhoto(c2)}
+          {opened[3] && this.redPhoto(c3)}
+          {opened[4] && this.redPhoto(c4)}
+          {opened[5] && this.redPhoto(c5)}
+          {opened[6] && this.redPhoto(c6)}
+          {opened[7] && this.redPhoto(c7)}
+          {opened[8] && this.redPhoto(c8)}
+          {opened[9] && this.redPhoto(c9)}
+          {opened[10] && this.redPhoto(c10)}
+          {opened[11] && this.redPhoto(c11)}
+          {opened[12] && this.redPhoto(c12)}
+          {opened[13] && this.redPhoto(c13)}
+          {opened[14] && this.redPhoto(c14)}
+          {opened[15] && this.redPhoto(c15)}
+          {opened[16] && this.redPhoto(c16)}
+          {opened[17] && this.redPhoto(c17)}
+          {opened[18] && this.redPhoto(c18)}
+          {opened[19] && this.redPhoto(c19)}
+          {opened[20] && this.redPhoto(c20)}
+          {opened[21] && this.redPhoto(c21)}
+          {opened[22] && this.redPhoto(c22)}
+          {opened[23] && this.redPhoto(c23)}
+          {opened[24] && this.redPhoto(c24)}
+          {opened[25] && this.redPhoto(c25)}
+          {opened[26] && this.redPhoto(c26)}
+          {opened[27] && this.redPhoto(c27)}
+          {opened[28] && this.redPhoto(c28)}
+        </div>
         <div class="col-sm" id="film3box">
           <br></br>
 
@@ -30,8 +161,9 @@ the collection."
           <p>
             Linda Koulisis sensed an opportunity. It was September 2016, and
             Koulisis, a talent agent and former film producer based in Los
-            Angeles, was in New York for a special screening of Charles
-            Burnett’s “To Sleep With Anger,” a critically admired but
+            Angeles, was in New York for a special screening of{" "}
+            {this.redText("Charles Burnett’s", 0)} "
+            {this.redText("To Sleep With Anger", 2)},” a critically admired but
             little-seen film she had worked on in 1990.
           </p>
           <p>
@@ -131,10 +263,12 @@ the collection."
           </p>
           <p>
             “You always wanted as a filmmaker to be part of the Criterion
-            Collection, you’re always hoping for that call,” said Gina
-            Prince-Bythewood, the director of acclaimed Black-led dramas like
-            “Love & Basketball” and “Beyond the Lights.” Though Criterion has
-            never reached out to her, Prince-Bythewood still feels a rush of
+            Collection, you’re always hoping for that call,” said{" "}
+            {this.redText("Gina Prince-Bythewood", 1)}, the director of
+            acclaimed Black-led dramas like “
+            {this.redText("Love & Basketball", 3)}” and “
+            {this.redText("Beyond the Lights", 4)}” Though Criterion has never
+            reached out to her, Prince-Bythewood still feels a rush of
             anticipation when the company announces new titles. “Every month,
             they put out an alert about their films coming out, and every month,
             I open it to see if they’re going to highlight any Black
@@ -200,9 +334,9 @@ the collection."
           </p>
           <p>
             Amy Heller, president of Milestone Films, another archival movie
-            distributor that released an earlier Burnett title, “Killer of
-            Sheep,” in 2007, said that many film ranking systems historically
-            have been forged in echo chambers.
+            distributor that released an earlier Burnett title, “
+            {this.redText("Killer of Sheep", 5)},” in 2007, said that many film
+            ranking systems historically have been forged in echo chambers.
           </p>
           <p>
             “The overwhelming majority of the filmmakers anointed, like the
@@ -219,10 +353,11 @@ the collection."
           <p>
             Though Burnett succeeded in joining the Criterion set, other Black
             filmmakers may choose not to make the effort, assuming that they are
-            unwelcome. That was the case for Haile Gerima, a peer of Burnett’s
-            and the director of the trailblazing “Sankofa” (1993). For Gerima,
-            the Criterion Collection brings back memories of what he called the
-            “independent white American film movement” of the 1990s.
+            unwelcome. That was the case for {this.redText("Haile Gerima", 6)},
+            a peer of Burnett’s and the director of the trailblazing “
+            {this.redText("Sankofa", 7)}” (1993). For Gerima, the Criterion
+            Collection brings back memories of what he called the “independent
+            white American film movement” of the 1990s.
           </p>
           <p>
             “Our experience never allowed us to even think of the possibility of
@@ -233,9 +368,10 @@ the collection."
           <p>
             Becker said that the lack of African-American films in the
             collection is in part a reflection of his personal “blind spots.”
-            These were at play, for example, in his initial reaction to Julie
-            Dash’s “Daughters of the Dust” (1991), the first theatrically
-            released film directed by an African-American woman.
+            These were at play, for example, in his initial reaction to{" "}
+            {this.redText("Julie Dash's", 8)} “
+            {this.redText("Daughters of the Dust", 9)}” (1991), the first
+            theatrically released film directed by an African-American woman.
           </p>
           <p>
             In 1992, Dash, who studied the Criterion Collection as a graduate
@@ -279,9 +415,11 @@ the collection."
             Dunham — it has no African-American directors born after 1957.
           </p>
           <p>
-            One who potentially could have been included is Barry Jenkins, who
-            directed the best-picture winner “Moonlight” (2016). Jenkins’s
-            influential debut feature, “Medicine for Melancholy” (2009), is
+            One who potentially could have been included is{" "}
+            {this.redText("Barry Jenkins", 10)}, who directed the best-picture
+            winner “{this.redText("Moonlight", 11)}” (2016). Jenkins’s
+            influential debut feature, “
+            {this.redText("Medicine for Melancholy", 12)}” (2009), is
             distributed by IFC, which has enjoyed a long-running relationship
             with the Criterion Collection. Other IFC films, including Dunham’s
             “Tiny Furniture” (2010) and Dano’s “Wildlife” (2018), received
@@ -295,26 +433,29 @@ the collection."
             distribution rights in 2018.
           </p>
           <p>
-            The director Ava DuVernay, who founded a distribution company,
-            ARRAY, focused on the work of people of color and women, said that
-            Criterion had contributed to “cinema segregation in the art-house
-            circuit.”
+            The director {this.redText("Ava DuVernay", 13)}, who founded a
+            distribution company, ARRAY, focused on the work of people of color
+            and women, said that Criterion had contributed to “cinema
+            segregation in the art-house circuit.”
           </p>
           <p>
             “There are all these gates that are closed to Black filmmakers,” she
             said. “It’s a minimizing of the Black film canon. But also it’s a
             minimizing of the audience, to think that they wouldn’t be
-            interested in Haile Gerima’s ‘Sankofa,’ or ‘Ashes and Embers,’ or
-            would not want to see all the work of Julie Dash, or Kathleen
-            Collins, or Charles Burnett, and on and on.”
+            interested in Haile Gerima’s ‘{this.redText("Sankofa", 7)},’ or ‘
+            {this.redText("Ashes and Embers", 14)},’ or would not want to see
+            all the work of {this.redText("Julie Dash", 8)}, or{" "}
+            {this.redText("Kathleen Collins", 15)}, or{" "}
+            {this.redText("Charles Burnett", 0)}, and on and on.”
           </p>
           <p>
-            DuVernay said that Criterion had passed on her own film, “Middle of
-            Nowhere” (2012), for which she became the first Black filmmaker to
-            win the directing prize at Sundance. “There wasn’t any rights
-            issue,” said DuVernay, who owns the movie. “It was just a pass.” In
-            an emailed statement, Becker said he had no record or memory of
-            this, and offered to release “Middle of Nowhere” on Blu-ray.
+            DuVernay said that Criterion had passed on her own film, “
+            {this.redText("Middle of Nowhere", 16)}” (2012), for which she
+            became the first Black filmmaker to win the directing prize at
+            Sundance. “There wasn’t any rights issue,” said DuVernay, who owns
+            the movie. “It was just a pass.” In an emailed statement, Becker
+            said he had no record or memory of this, and offered to release
+            “Middle of Nowhere” on Blu-ray.
           </p>
           <p>
             “If Ava would want to work on a special edition with us, we would be
@@ -324,10 +465,16 @@ the collection."
           <p>
             The Criterion Collection wasn’t always quite as white as it is now.
             In the early 1990s, it put out several acclaimed films by Black
-            directors on laser disc, including Melvin Van Peebles’s “Sweet
-            Sweetback’s Baadasssss Song,” John Singleton’s “Boyz N the Hood,”
-            Spike Lee’s “She’s Gotta Have It,” and the Hughes brothers films
-            “Menace II Society” and “Dead Presidents.” But none of those titles
+            directors on laser disc, including{" "}
+            {this.redText("Melvin Van Peebles’s", 17)} “
+            {this.redText("SweetSweetback’s Baadasssss Song", 18)},”{" "}
+            {this.redText("John Singleton’s", 19)} “
+            {this.redText("Boyz N the Hood", 20)},”
+            {this.redText("Spike Lee’s", 21)} “
+            {this.redText("She’s Gotta Have It", 22)},” and the{" "}
+            {this.redText("Hughes brothers", 23)} films “
+            {this.redText("Menace II Society", 24)}” and “
+            {this.redText("Dead Presidents", 25)}.” But none of those titles
             survived the transition, in 1998, to DVD.
           </p>
           <p>
@@ -375,11 +522,13 @@ the collection."
           <p>
             But the physical collection, which has greater cachet among
             cinephiles and in film schools, has not kept up. In the past five
-            years, out of hundreds of new physical editions, only two — “To
-            Sleep With Anger” and “Bamboozled” — have been works by Black
-            Americans. Another — a reissue of “The Learning Tree,” the debut
-            feature by the pioneering African-American director Gordon Parks —
-            is planned for next year.
+            years, out of hundreds of new physical editions, only two — “
+            {this.redText("To Sleep With Anger", 2)}” and “
+            {this.redText("Bamboozled", 26)}” — have been works by Black
+            Americans. Another — a reissue of “
+            {this.redText("The Learning Tree", 27)},” the debut feature by the
+            pioneering African-American director{" "}
+            {this.redText("Gordon Parks", 28)} — is planned for next year.
           </p>
           <p>
             To diversify the collection, Becker said, he is assembling a
